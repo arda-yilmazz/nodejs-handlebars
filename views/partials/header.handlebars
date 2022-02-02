@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {{title}}
+        {{#unless title}}
+        Document
+        {{/unless}}
+    </title>
+    <link rel="icon" href="img/logo.svg">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/{{style}}">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="left">
+            <h1>
+                <a href="/">
+                    <img src="img/logo.svg" alt="logo">
+                </a>
+            </h1>
+        </div>
+
+        <div class="center">
+            <ul>
+                <li>
+                    <a href="/">Anasayfa</a>
+                </li>
+                <li>
+                    <a href="/hakkinda">Hakkında</a>
+                </li>
+                <li>
+                    <a href="/iletisim">İletişim</a>
+                </li>
+                {{#if user}}
+                <li>
+                    <a href="/bir-seyler-paylas">Bir şeyler paylaş</a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+
+        <div class="right">
+            {{!-- user --}}
+            {{#if user}}
+            <div class="profile">
+                <img src="https://plusstand.com/wp-content/uploads/2017/10/blank-profile-picture-973460_960_720.png"
+                    alt="profile">
+                <div class="profile-info">
+                    <h3>
+                        <a href="/profil">{{user.user_display_name}} {{user.user_surname}}</a>
+                    </h3>
+                    <p>
+                        {{user.username}}
+                    </p>
+                </div>
+                <a href="/auth/logout" class="logout">Çıkış Yap</a>
+            </div>
+
+            {{else}}
+
+            <div class="form">
+                <ul>
+                    <li>
+                        <a href="/giris-yap">Giriş Yap</a>
+                    </li>
+                    <li>
+                        <a href="/kayit-ol">Kayıt Ol</a>
+                    </li>
+                </ul>
+            </div>
+
+            {{/if}}
+        </div>
+    </header>

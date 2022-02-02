@@ -1,0 +1,25 @@
+<div class="home">
+    {{#if posts}}
+    <div class="posts">
+        {{#each posts}}
+        <div class="post">
+            <h3>
+                <a href="/{{ post_id }}">
+                    {{this.post_title}}
+                </a>
+            </h3>
+            <p class="content">
+                {{this.post_content}}
+            </p>
+            <div class="actions">
+                <a href="javascript:void(0)">
+                    <img src="img/like.svg" alt="like">
+                    <span>Beğen</span>
+                </a>
+                <a href="javascript:void(0)">Comment</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</div>

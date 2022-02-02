@@ -1,0 +1,66 @@
+.share {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 2rem;
+    }
+
+    form {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            li {
+                margin: 1rem 0;
+                width: 100%;
+
+                label {
+                    display: block;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                textarea {
+                    padding: 20px 20px;
+                    width: 500px;
+                    height: 200px;
+                    resize: none;
+                    border: 1px solid #ccc;
+                    border-radius: 30px;
+                    font-size: 18px;
+                }
+
+                input {
+                    padding: 10px 20px;
+                    font-size: 18px;
+                    border-radius: 30px;
+                    border: 1px solid #ccc;
+                    width: calc(100% - 42px);
+
+                    &.error {
+                        border: 1px solid red;
+                    }
+                }
+
+                button {
+                    padding: 10px;
+                    font-size: 18px;
+                    border-radius: 30px;
+                    border: 1px solid #ccc;
+                    width: 150px;
+                    background-color: orangered;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

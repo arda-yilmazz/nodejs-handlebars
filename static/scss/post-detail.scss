@@ -1,0 +1,60 @@
+.post-detail {
+    height: calc(100vh - 100px);
+    overflow: auto;
+    padding: 20px;
+
+    .post-title {
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .post-content {
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .desc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+
+            .post-likes {
+                color: #aaa;
+            }
+
+            .date {
+                margin-left: 10px;
+                span {
+                    color: #aaa;
+                }
+            }
+        }
+
+        .actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 20px;
+
+            a {
+                margin-left: 20px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
